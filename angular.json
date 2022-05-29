@@ -2,6 +2,7 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
+  
   "projects": {
     "chat-sts-app": {
       "projectType": "application",
@@ -28,7 +29,12 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "_redirects",
+                "input": "src",
+                "output": "/"
+              }
             ],
             "styles": [
               "src/styles.scss"
