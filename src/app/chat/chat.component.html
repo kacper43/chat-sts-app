@@ -1,0 +1,18 @@
+<div class="flex-container">
+  <div class="header-container">
+    <app-connected-users [connectedUsers]="userCount"></app-connected-users>
+  </div>
+  <div class="messages-container" #messages_container [scrollTop]="messages_container.scrollHeight">
+    <ng-container *ngFor="let message of messages; index as i">
+      <app-server-message *ngIf="message.type == 'SERVER'" [message]="message"></app-server-message>
+      <app-external-message *ngIf="message.type == 'EXTERNAL_USER'" [message]="message"></app-external-message>
+      <app-local-message *ngIf="message.type == 'LOGGED_USER'" [message]="message"></app-local-message>
+    </ng-container>
+    <ng-container *ngFor="let message of typingMessages">
+      <app-external-message class="typing" [message]="message"></app-external-message>
+    </ng-container>
+  </div>
+  <div class="new-message-container">
+    <app-message-input (sendNewMessage)="sendChatMessage($event)"></app-message-input>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .header-container {
+        flex: 0 1 auto;
+    }
+
+    .messages-container {
+        flex: 1 1 auto;
+        padding: 0.2em 0.5em;
+        box-sizing: border-box;
+        overflow-y: scroll;
+    }
+
+    .new-message-container {
+        border-top: 1px solid grey;
+        box-sizing: border-box;
+        flex: 0 1 100px;
+        min-height: 100px;
+        display: grid;
+    }
+
+    .typing {
+        animation: change-opacity 2s infinite;
+    }
+}
+@keyframes change-opacity {
+    0% {
+        opacity: .7;
+    }
+
+    50% {
+        opacity: .1;
+    }
+
+    100% {
+        opacity: .7;
+    }
+}

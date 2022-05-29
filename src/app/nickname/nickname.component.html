@@ -1,0 +1,7 @@
+<div class="container">
+  <span class="form">
+    <span class="label">Choose your username</span>
+    <input type="text" name="usernameInput" [(ngModel)]="username">
+    <button [disabled]="!isUsernameValid()" (click)="addNewChatUser()">ENTER CHATROOM</button>
+  </span>
+</div>

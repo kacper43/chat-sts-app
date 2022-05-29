@@ -1,3 +1,6 @@
+import { ChatService } from './services/chat.service';
+import { NicknameModule } from './nickname/nickname.module';
+import { ChatModule } from './chat/chat.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -10,9 +13,11 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ChatModule,
+    NicknameModule
   ],
-  providers: [],
+  providers: [ChatService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

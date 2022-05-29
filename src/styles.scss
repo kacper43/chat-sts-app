@@ -1,1 +1,39 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Work+Sans:wght@200;300;400;600&display=swap');
+@import "./assets/variables";
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+}
+
+input[type=text] {
+    border-radius: 5em;
+    border: 1px solid lightgrey;
+    padding: 0.5em 1em;
+    box-sizing: border-box;
+    margin: 0.5em 0;
+
+    &:focus-visible {
+        outline: none;
+        border: 1px solid rgb(107, 134, 143);
+    }
+}
+
+button {
+    appearance:none;
+    -webkit-appearance:none;
+    padding: 0.8em;
+    border: none;
+    background-color: $primary-color;
+    color:#fff;
+    border-radius: 5em;
+
+    &:hover {
+        cursor: pointer;
+        background-color: $primary-accent-color;
+    }
+  }

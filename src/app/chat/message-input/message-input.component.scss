@@ -1,0 +1,22 @@
+:host {
+    display: grid;
+}
+
+.new-message-grid {
+    display: grid;
+    grid-template-columns: 1fr 50px;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 1em;
+
+    .send-message {
+        
+        img {
+            cursor: pointer;
+            max-height: 1.6em;
+        }
+    }
+}
