@@ -23,7 +23,7 @@ export class ChatService {
   currentUser: string = '';
   constructor() { }
 
-  socket = io('wss://socketio-chat-h9jt.herokuapp.com');
+  socket = io('http://localhost:3000');
 
   userCountListener() {
     return this.userCount$.asObservable();
