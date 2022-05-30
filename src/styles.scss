@@ -36,4 +36,8 @@ button {
         cursor: pointer;
         background-color: $primary-accent-color;
     }
+
+    &:disabled {
+        background-color: grey;
+    }
   }
