@@ -57,14 +57,14 @@ export class ChatComponent implements OnInit, AfterViewChecked {
   startNewUsersListener = () => {
     this.chatService.userJoined().subscribe((user: string) => {
       this.messages.push(this.generateMessage(user, user + ' joined the chat', MessageType.SERVER));
-      this.lastSender = user;
+      this.lastSender = 'server';
     });
   }
 
   startLeavingUsersListener = () => {
     this.chatService.userLeft().subscribe((user: string) => {
       this.messages.push(this.generateMessage(user, user + ' left', MessageType.SERVER));
-      this.lastSender = user;
+      this.lastSender = 'server';
     })
   }
 
