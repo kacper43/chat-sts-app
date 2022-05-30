@@ -13,10 +13,21 @@
     padding: 0 1em;
 
     .send-message {
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        box-sizing: border-box;
+        display: grid;
+        place-items: center;
+        
+        &:hover {
+            background-color: lightgrey;
+        }
         
         img {
             cursor: pointer;
-            max-height: 1.6em;
+            max-height: 24px;
+
         }
     }
 }

@@ -29,8 +29,10 @@ export class MessageInputComponent implements OnInit {
   }
 
   sendMessage() {
-    this.sendNewMessageEventEmitter.emit(this.messageText);
-    this.messageText = '';
+    if(this.messageText.length > 0) {
+      this.sendNewMessageEventEmitter.emit(this.messageText);
+      this.messageText = '';
+    } 
   }
 
   updateTypingInfo() {
