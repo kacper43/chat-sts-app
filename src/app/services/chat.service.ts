@@ -25,7 +25,7 @@ export class ChatService {
 
   socket = io('https://sts-chat-server.herokuapp.com/');
 
-  userCountListener() {
+  userCountListener = () => {
     return this.userCount$.asObservable();
   }
   addUserToChat = (username: string) => {
