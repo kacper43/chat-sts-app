@@ -7,14 +7,11 @@ import { ConnectedUsersComponent } from './connected-users/connected-users.compo
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ChatComponent } from './chat.component';
-import { SocketIoConfig, SocketIoModule } from 'ngx-socket-io';
 
-const config: SocketIoConfig = { url: 'http://localhost:8988', options: {} };
 
 @NgModule({
   imports: [
     CommonModule,
-    SocketIoModule.forRoot(config),
     FormsModule
   ],
   exports: [
